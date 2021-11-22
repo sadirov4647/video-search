@@ -1,7 +1,7 @@
 <template>
         <li class="list-group-item" @click="onVideoClick">
-            <!-- <img :src="thumbnailUrl"> -->
-            <!-- {{ response.snippet.title }} -->
+            <img :src="thumbnailUrl">
+            <h2>{{ titleUrl }}</h2>
         </li>
 </template>
 
@@ -10,9 +10,12 @@
         name:'VideoListItem',
         props:['response'],
         computed:{
-            // thumbnailUrl(){
-            //     return this.response.snippet.thumbnails.default.url
-            // }
+            thumbnailUrl(){
+                return this.response.snippet.thumbnails.default.url
+            },
+            titleUrl(){
+                return this.response.snippet.title
+            }
         },
         methods:{
             onVideoClick(){

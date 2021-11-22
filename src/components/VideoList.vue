@@ -1,6 +1,7 @@
 <template>
-      <ul>
-        <VideoListItem
+  {{ responses }}
+  <ul v-if="responses">
+  <VideoListItem
         class="list-group"
         v-for="response in responses"
         :response="response"
