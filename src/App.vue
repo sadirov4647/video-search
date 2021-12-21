@@ -2,7 +2,7 @@
   <div>
       <SearchBar  @termChange="onTermChange"/>
       <VideoDetail :response="selectedVideo"/>
-      <VideoList @videoItemClicked="onVideoClick" :response="responses"/>
+      <VideoList @videoItemClicked="onVideoClick" :responses="responses"/>
   </div>
 </template>
 

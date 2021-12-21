@@ -15,7 +15,7 @@
         props:['response'],
         computed:{
             videoUrl(){
-                const {videoId} = this.video.id;
+                const videoId = this.response.id.videoId;
                 return `https://www.youtube.com/embed/${videoId}`
             }
         }

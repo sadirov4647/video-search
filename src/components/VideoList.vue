@@ -1,15 +1,12 @@
 <template>
-  {{ responses }}
-  <ul v-if="responses">
+  <ul class="video-list__list" v-if="responses">
   <VideoListItem
-        class="list-group"
-        v-for="response in responses"
-        :response="response"
-        :key="response.etag"
-        @videoItemClicked="onVideoClick"
-        />
-        <VideoListItem/>
-      </ul>
+    v-for="response in responses"
+    :response="response"
+    :key="response.etag"
+    @videoItemClicked="onVideoClick"
+  />
+  </ul>
 </template>
 
 <script>
@@ -29,4 +26,10 @@ export default {
 </script>
 
 <style scoped>
+.video-list__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+  margin: 0;
+}
 </style>
