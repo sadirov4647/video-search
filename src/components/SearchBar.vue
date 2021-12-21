@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <input type="text" @input="onInput"/>
+  <div class="searchbar-input">
+    <input type="text" @input="onInput" placeholder="Search whatever you want..."/>
   </div>
 </template>
 
@@ -15,4 +15,17 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  input{
+    padding: 16px 40px;
+    outline: none;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .searchbar-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+</style>
